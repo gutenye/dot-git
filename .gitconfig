@@ -1,0 +1,48 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	#commentchar = !
+	excludesfile = /home/guten/.gitignore
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+	guitool = meld
+[difftool]
+	prompt = false
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[format]
+	#pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+	pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+[alias]
+	a = add -A
+	b = branch
+	p = push
+	ci = commit
+	ca = commit -a
+	co = checkout
+	st = status
+	di = diff
+	dt = difftool
+	dd = difftool -g -d
+	ta = tag
+	aa = add --all
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	now = commit --amend --reset-author
+	l = log --graph --abbrev-commit --date=relative
+	sh = stash
+	shp = stash pop
+	shl = stash list
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1438x879+0+19
+	main-window-view = FileView
+	history-view-vpane-position = 544
+	file-view-vpane-position = 194
+[push]
+	default = simple
